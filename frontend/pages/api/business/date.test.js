@@ -1,4 +1,4 @@
-import { default as dateHandler } from './date'
+import { default as handler } from './date'
 import { createRequest, createResponse } from 'node-mocks-http'
 
 describe("API/Business", () => {
@@ -8,7 +8,7 @@ describe("API/Business", () => {
       res: createResponse()
     }
 
-    dateHandler(mock.req, mock.res);
+    handler(mock.req, mock.res);
 
     expect(mock.res.statusCode).toEqual(200)
   })
